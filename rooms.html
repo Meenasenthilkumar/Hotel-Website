@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms | Home Stay</title>
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar nav">
+            <div class="logo">HOME<span>STAY</span></div>
+            <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./gallary.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                 <li><a href="tel:+9123580139" class="btn-book">Book Now</a></li>
+            </ul>
+          
+        </nav>
+    </header>
+    
+
+    <section class="rooms-header">
+        <h1>Our Sanctuaries</h1>
+        <p>Choose the perfect space for your stay</p>
+    </section>
+
+    <main class="rooms-container">
+        <div class="room-card" data-category="luxury">
+            <div class="room-image">
+                <img src="./front.jpeg" alt="Deluxe Room">
+                <div class="room-overlay">
+                    <div class="room-details">
+                        <h3>Guest House</h3>
+                        <p>Home Stay • City View • Balcony</p>
+                        <a href="#" class="btn-view">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-category="standard">
+            <div class="room-image">
+                <img src="./big room.jpeg" alt="Standard Room">
+                <div class="room-overlay">
+                    <div class="room-details">
+                        <h3>Standard Comfort With AC</h3>
+                        <p>Need & Clean • High-quality</p>
+                        <span class="price">2000/night</span>
+                        <a href="#" class="btn-view">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-category="luxury">
+            <div class="room-image">
+                <img src="./small-room-wall.jpeg" alt="Penthouse">
+                <div class="room-overlay">
+                    <div class="room-details">
+                        <h3>Small Room With AC</h3>
+                        <p>Panoramic View • Like Home Feel</p>
+                        <span class="price">1000/night</span>
+                        <a href="#" class="btn-view">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+
+</body>
+</html>

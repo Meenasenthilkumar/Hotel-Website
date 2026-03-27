@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.contact-scene {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.contact-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 8vw;
+    line-height: 1;
+    margin-bottom: 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.link-item {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 300;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+/* The Secret Image Reveal */
+.hover-reveal {
+    position: fixed;
+    width: 250px;
+    height: 350px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 15px;
+}
+
+.hover-reveal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover States */
+.link-item:hover a {
+    padding-left: 30px;
+    color: #ffca28;
+}
+
+.link-item:hover .hover-reveal {
+    transform: translate(-50%, -50%) scale(1) rotate(5deg);
+}
+
+.contact-header:hover h1 {
+    color: #fff;
+    -webkit-text-stroke: 0px;
+}
+
+
+
+/* --- Tablet & Mobile Responsiveness --- */
+
+/* Tablet View (below 1024px) */
+@media (max-width: 1024px) {
+    .contact-scene {
+        padding: 0 5%;
+    }
+
+    .contact-header h1 {
+        font-size: 10vw; /* Scales text for tablets */
+    }
+
+    .link-item a {
+        font-size: 5vw; /* Slightly larger for easier tapping */
+    }
+
+    .hover-reveal {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+/* Mobile View (below 768px) */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Allow scrolling on mobile if links overflow */
+    }
+
+    .contact-scene {
+        height: auto;
+        padding: 100px 20px; /* Space for fixed navbar */
+        display: block;
+    }
+
+    .contact-header h1 {
+        font-size: 3.5rem;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+        margin-bottom: 20px;
+    }
+
+    .contact-links {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .link-item a {
+        font-size: 1.2rem; /* Fixed readable size for mobile */
+        word-break: break-all; /* Prevents long emails from breaking layout */
+        line-height: 1.4;
+    }
+
+    /* Disable Hover Reveal on Mobile */
+    /* Since phones have no mouse, we hide the reveal to keep it clean */
+    .hover-reveal {
+        display: none;
+    }
+
+    .link-item:hover a {
+        padding-left: 10px;
+        color: #ffca28;
+    }
+
+    .footer-note {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    /* Navbar Mobile (Consistent with your other pages) */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
